@@ -21,14 +21,14 @@ P.S. Why did I call this project "V2"? Because two or three weeks ago I created 
 📁 TASK_MANAGERV2/  
 │
 ├── 📁 db/
-│ ├── database.py  
-│ └── repository.py  
+│   ├── database.py  
+│   └── repository.py  
 │
 ├── 📁 models/
-│ └── task.py  
+│   └── task.py  
 │
 ├── 📁 service/
-│ └── task_service.py  
+│   └── task_service.py  
 │
 ├── 📜 .env  
 ├── 📜 .gitignore  
@@ -49,7 +49,7 @@ cd Task_ManagerV2
 ```
 
 2. Set Up the Environment
-   Create a `.env` file in the root directory and add your PostgreSQL credentials:
+Create a `.env` file in the root directory and add your PostgreSQL credentials:
 
 ```text
 DB_NAME=task_manager_db
@@ -59,7 +59,7 @@ DB_HOST=localhost
 ```
 
 3. Install Dependencies
-   For Mac or Linux:
+For Mac or Linux:
 
 ```bash
 source .venv/bin/activate
@@ -91,3 +91,4 @@ python main.py
 - **PostgreSQL**
 - **Psycopg2** (Synchronous DB Driver)
 - **Python-Dotenv** (Environment Management)
+
