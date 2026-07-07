@@ -18,5 +18,20 @@ class TaskService:
     def show_tasks(self):
         return self.repository.get_all_tasks()
     
-    def update_task_status(self, id, status):
-        pass
+    def update_task_status(self, id: int, status: str):
+        task = self.repository.get_task_by_id(id)
+
+        if task is None:
+            raise ValueError("ID not found or doesn't exist!")
+        
+        task.status = status
+
+        return self.repository.update_task(task)
+
+    def delete_task_id(self, id: int):
+        task = self.repository.get_task_by_id(id)
+
+        if task is None:
+            raise ValueError("ID not found or doesn't exist!")
+        
+        return self.repository.delete_task(id)

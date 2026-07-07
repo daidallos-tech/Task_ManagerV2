@@ -54,16 +54,37 @@ class TaskRepository:
                     SELECT title, description, status, id FROM tasks WHERE id = %s;
                 """, (id,))
 
+                row = cur.fetchone()
 
-        row = cur.fetchone()
-
-        if row is None:
-            conn.close()
-            return None
+                if row is None:
+                    conn.close()
+                    return None
         
-        task = Task(title=row[0], description=row[1], status=row[2], id=row[3])
+                task = Task(title=row[0], description=row[1], status=row[2], id=row[3])
                 
         conn.close()
         return task
     
+    def update_task(self, task: Task):
+        conn = psycopg2.connect(self.db_params)
+
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    UPDATE tasks SET status = %s WHERE id = %s;
+                """, (task.status, task.id))
+        
+        conn.close()
+    
+    def delete_task(self, id: int):
+        conn = psycopg2.connect(self.db_params)
+
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    DELETE FROM tasks WHERE id = %s;
+                """, (id,))
+        
+        conn.close()
+
     
