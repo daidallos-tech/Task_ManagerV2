@@ -1,6 +1,6 @@
 # Task_ManagerV2
 
-❓About Task ManagerV2.
+### ❓About Task ManagerV2.
 
 That's my first project with SQL database (I'm still learning). There is CRUD system in this project, I chose it because I want to practice DB + Python and understand what I do and why I do that.
 This application can:
@@ -12,7 +12,7 @@ As I said earlier it's a clean CRUD system.
 
 P.S Why I called this project "V2" because two or three weeks ago I've created the same project, but that was awful actually. There is a JSON saves in first project and almost spaghetti code.
 
-🏛️ Project Architecture
+### 🏛️ Project Architecture
 
 📁 TASK_MANAGERV2/  
 │
@@ -33,7 +33,7 @@ P.S Why I called this project "V2" because two or three weeks ago I've created t
 ├── 📜 README.md  
 └── 📜 requirements.txt
 
-💻How to run Locally?
+### 💻How to run Locally?
 
 1. Clone and Navigate
 
@@ -42,7 +42,7 @@ git clone <your-repository-url>
 cd Task_ManagerV2
 ```
 
-2. Set Up the Environment
+2. Set Up the Environment.
    Create a `.env` file in the root directory and add your PostgreSQL credentials:
 
 ```text
@@ -52,7 +52,7 @@ DB_PASSWORD=your_secure_password
 DB_HOST=localhost
 ```
 
-3. Install Dependencies
+3. Install Dependencies.
    For mac or linux
 
 ```bash
