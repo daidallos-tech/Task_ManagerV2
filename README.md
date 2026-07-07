@@ -53,13 +53,13 @@ DB_HOST=localhost
 ```
 
 3. Install Dependencies.
-   For mac or linux
+   For mac or linux users
 
 ```bash
 source .venv/bin/activate
 ```
 
-For windows
+For windows users
 
 ```bash
 .venv\Scripts\activate
